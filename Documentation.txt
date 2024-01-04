@@ -1,0 +1,127 @@
+DOCUMENTATION
+
+NOTES API
+
+1. Get all Notes
+•	   URL: '/notes'
+•	   Method: GET
+•	   Description: Retrieve all the notes
+•	   Response:
+		Status code: 200
+		Response body: Array of notes
+
+
+2. Create a New Note
+
+•	URL: '/notes/new'
+•	   Method: GET
+•	   Description: Render a new note creation form
+•	   Response:
+		Status code: 200
+		Response body: New note form
+
+•	   URL: '/notes'
+•	   Method: POST
+•	   Description: Create a new note
+•	   Request Body: {title: String, content: String}
+•	   Response:
+		Status code: 302
+		Response body: Redirect to the newly created note's detail's page
+
+3. Get a Note by ID
+•	   URL: '/notes/:id'
+•	   Method: GET
+•	   Description: Retrieve a specific note by its ID
+•	   Response:
+		Status code: 200
+		Response body: Details of the particular note
+
+4. Update a Note by ID
+
+•	URL: '/notes/:id/edit'
+•	   Method: GET
+•	   Description: Render an Edit form
+•	   Response:
+		Status code: 200
+		Response body: Edit form
+
+•	   URL: '/notes/:id'
+•	   Method: PUT
+•	   Description: Updating a particular note by its ID
+•	   Request Body: {title: String, content: String}
+•	   Response:
+		Status code: 302
+		Response body: Redirect to the updated note's detail's page
+
+
+
+5. Delete a Note by ID
+•	   URL: '/notes/:id'
+•	   Method: DELETE
+•	   Description: Delete a specific note by its ID
+•	   Response:
+		Status code: 302
+		Response body: Redirect to the list of notes (Index) page
+
+USER AUTHENTICATION API
+
+1. Register User
+•	   URL: '/register'
+•	   Method: GET
+•	   Description: Render a registration form
+•	   Response:
+		Status code: 200
+		Response body: Registration form
+
+
+•	   URL: '/register'
+•	   Method: POST
+•	   Description: Register a new user
+•	   Request Body: {username: String, email: String, password: string}
+•	   Response:
+		Status code: 302
+		Response: Redirect to the index page.
+		
+
+2. Login User
+•	   URL: '/login'
+•	   Method: GET
+•	   Description: Render a login form
+•	   Response:
+		Status code: 200
+		Response body: Login form
+
+
+•	   URL: '/login'
+•	   Method: POST
+•	   Description: Login the existing user
+•	   Request Body: {username: String, password: String}
+•	   Response:
+		Status code: 302
+		Response: Redirect to the index page
+		
+
+3. Logout User
+•	   URL: '/logout'
+•	   Method: GET
+•	   Description: Logout the currently logged in user
+•	   Response:
+		Status code: 302
+		Response body: Redirect to the index page
+		
+
+HOME PAGE
+
+•	URL: '/'
+•	   Method: GET
+•	   Description: Render a home form
+   
+
+
+
+
+
+    
+
+
+
